@@ -1,5 +1,7 @@
 package com.example.simpleservicedemo;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +17,7 @@ public class SimpleservicedemoApplication {
 	
 	@RequestMapping("/")
 	public String showRoot() {
+		System.out.println("checking log here " + new Date());
 		return "Hello " + name;
 	}
 	
